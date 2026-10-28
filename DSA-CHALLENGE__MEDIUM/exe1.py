@@ -12,5 +12,5 @@ def second_largest(numbers):
 
     return second
 print(second_largest([10, 5, 8, 10, 3]))   
-print(second_largest([4, 4, 4]))    
+print(second_largest([1, 2, 3, 4, 5]))    
 print(second_largest([-5, -2, -8, -3]))    
