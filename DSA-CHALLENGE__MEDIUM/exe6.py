@@ -4,3 +4,4 @@ def first_unique(text):
             return character
 
     return None
+print(first_unique("swiss"))    

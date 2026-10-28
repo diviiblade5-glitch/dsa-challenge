@@ -5,3 +5,4 @@ def find_missing(numbers):
     actual_sum = sum(numbers)
 
     return expected_sum - actual_sum
+print(find_missing([1, 2, 4, 5]))
