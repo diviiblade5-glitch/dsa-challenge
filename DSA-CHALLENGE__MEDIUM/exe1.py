@@ -11,4 +11,6 @@ def second_largest(numbers):
             second = number
 
     return second
-print(second_largest([10, 5, 8, 10, 3] ))    
+print(second_largest([10, 5, 8, 10, 3]))   
+print(second_largest([4, 4, 4]))    
+print(second_largest([-5, -2, -8, -3]))    
