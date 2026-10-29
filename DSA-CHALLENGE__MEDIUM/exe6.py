@@ -1,7 +1,10 @@
-def first_unique(text):
-    for character in text:
-        if text.count(character) == 1:
-            return character
+def closest_number(numbers, target):
+    closest = numbers[0]
 
-    return None
-print(first_unique("swiss"))    
+    for number in numbers:
+        if abs(number - target) < abs(closest - target):
+            closest = number
+        elif abs(number - target) == abs(closest - target) and number < closest:
+            closest = number
+
+    return closest

@@ -1,13 +1,14 @@
 def balanced_brackets(text):
     stack = []
-    brackets = {'(': ')', '{': '}', '[': ']'}
-    
+    pairs = {")": "(", "]": "[", "}": "{"}
+
     for char in text:
-        if char in brackets:
+        if char in "([{":
             stack.append(char)
-        elif char in brackets.values():
-            if not stack or brackets[stack.pop()] != char:
+
+        elif char in ")]}":
+            if not stack or stack.pop() != pairs[char]:
                 return False
-    
+
     return len(stack) == 0
-print (balanced_brackets("(hellos)"))    
+print(balanced_brackets("(hello)"))  # True  

@@ -1,10 +1,4 @@
-def count_vowels(text):
-    vowels = "aeiou"
-    count = 0
-
-    for character in text.lower():
-        if character in vowels:
-            count += 1
-
-    return count
-print(count_vowels("Hello, World!"))
+def reverse_first(queue, k):
+    queue[:k] = queue[:k][::-1]
+    return queue
+print(reverse_first([10, 20, 30, 40, 50], k = 3))    

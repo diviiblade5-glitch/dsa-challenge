@@ -1,8 +1,17 @@
-def find_missing(numbers):
-    n = len(numbers) + 1
+def most_frequent(numbers):
+    if not numbers:
+        return None
 
-    expected_sum = n * (n + 1) // 2
-    actual_sum = sum(numbers)
+    frequency = {}
 
-    return expected_sum - actual_sum
-print(find_missing([1, 2, 4, 5]))
+    for number in numbers:
+        frequency[number] = frequency.get(number, 0) + 1
+
+    most_common = numbers[0]
+
+    for number in numbers:
+        if frequency[number] > frequency[most_common]:
+            most_common = number
+
+    return most_common
+print(most_frequent([2, 5, 2, 8, 2, 5]))
