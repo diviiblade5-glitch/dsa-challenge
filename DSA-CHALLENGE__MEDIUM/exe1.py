@@ -7,7 +7,7 @@ def second_largest(numbers):
             second = largest
             largest = number
 
-        elif number < largest and (second is None or number > second):
+        elif number != largest and (second is None or number > second):
             second = number
 
     return second
